@@ -1,201 +1,598 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Windcrest - Your Digital Partner for Stunning Websites</title>
-    <!-- Google Fonts: Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <!-- AOS ANIMATION LIBRARY-->>
+    <title>Windcrest — Digital Partner for Stunning Websites</title>
+    <link href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- External Stylesheet -->
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/cursor-loader.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/sections.css">
+    <link rel="stylesheet" href="assets/css/testimonials-contact.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
 </head>
-
 <body>
 
-    <!-- ===== HEADER / NAVBAR ===== -->
-    <header>
-        <div class="container">
-            <h1 class="logo"><a href="#home">Windcrest</a></h1>
+    <!-- CURSOR -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- LOADER -->
+    <div id="page-loader">
+        <div class="loader-inner">
+            <svg class="loader-logo" viewBox="0 0 80 40" fill="none">
+                <path d="M5 35 L20 5 L35 25 L50 5 L65 35" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            </svg>
+            <span class="loader-text">Windcrest</span>
+            <div class="loader-bar"><div class="loader-fill"></div></div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <header id="main-header">
+        <div class="container nav-container">
+            <a href="#home" class="logo-link">
+                <svg class="logo-icon" viewBox="0 0 40 20" fill="none">
+                    <path d="M2 17 L10 3 L18 12 L26 3 L34 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="logo-text">Windcrest</span>
+            </a>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#plans">Plans</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" class="nav-link"><span>Home</span></a></li>
+                    <li><a href="#about" class="nav-link"><span>About</span></a></li>
+                    <li><a href="#plans" class="nav-link"><span>Plans</span></a></li>
+                    <li><a href="#contact" class="nav-link"><span>Contact</span></a></li>
                 </ul>
             </nav>
+            <a href="#plans" class="nav-cta">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobile-menu">
+            <ul>
+                <li><a href="#home" class="mobile-link">Home</a></li>
+                <li><a href="#about" class="mobile-link">About</a></li>
+                <li><a href="#plans" class="mobile-link">Plans</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
         </div>
     </header>
 
-    <!-- ===== CURSOR ===== -->
-    <div id="cursor-dot"></div>
-
-    <!-- ===== HERO SECTION ===== -->
+    <!-- HERO -->
     <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content" data-aos="fade-right">
-                <h2>Crafting Digital Masterpieces for Your Business</h2>
-                <p>Elevate your online presence with a bespoke website tailored for the Indian market. Fast, affordable,
-                    and stunning.</p>
-                <a href="#plans" class="btn">Explore Our Plans</a>
+        <div class="hero-bg-elements">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="container hero-grid">
+            <div class="hero-container">
+                <div class="hero-badge" data-aos="fade-down" data-aos-delay="200">
+                    <span class="badge-dot"></span> Crafting for India's Digital Future
+                </div>
+                <h1 class="hero-headline" data-aos="fade-up" data-aos-delay="300">
+                    Websites That<br>
+                    <span class="headline-accent">Speak Louder</span><br>
+                    Than Words
+                </h1>
+                <p class="hero-sub" data-aos="fade-up" data-aos-delay="450">
+                    Bespoke digital experiences tailored for the Indian market. Fast, affordable, and unforgettable.
+                </p>
+                <div class="hero-actions" data-aos="fade-up" data-aos-delay="550">
+                    <a href="#plans" class="btn btn-primary">Explore Plans <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-ghost">See Our Work</a>
+                </div>
+                <div class="hero-stats" data-aos="fade-up" data-aos-delay="650">
+                    <div class="stat"><span class="stat-num" data-target="120">0</span><span>+</span><p>Projects Launched</p></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num" data-target="98">0</span><span>%</span><p>Client Satisfaction</p></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num" data-target="5">0</span><span>★</span><p>Average Rating</p></div>
+                </div>
             </div>
-            <div class="hero-image" data-aos="fade-left" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&auto=format&fit=crop"
-                    alt="Website Design and Development">
+            <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                <div class="mockup-wrapper">
+                    <!-- Floating Geometric Shapes (outside browser) -->
+                    <div class="geo-shapes" id="geo-shapes">
+                        <div class="geo-shape geo-circle" style="--sx:-6%; --sy:5%; --size:60px; --delay:0s; --dur:7s;"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="17" fill="none" stroke="#e85d26" stroke-width="2" opacity="0.7"/></svg></div>
+                        <div class="geo-shape geo-triangle" style="--sx:85%; --sy:-5%; --size:55px; --delay:1.5s; --dur:8s;"><svg viewBox="0 0 40 40"><polygon points="20,4 36,36 4,36" fill="none" stroke="#f7a438" stroke-width="2" opacity="0.65"/></svg></div>
+                        <div class="geo-shape geo-hex" style="--sx:90%; --sy:60%; --size:50px; --delay:3s; --dur:9s;"><svg viewBox="0 0 40 40"><polygon points="20,2 36,11 36,29 20,38 4,29 4,11" fill="none" stroke="#e85d26" stroke-width="1.5" opacity="0.55"/></svg></div>
+                        <div class="geo-shape geo-diamond" style="--sx:-5%; --sy:65%; --size:48px; --delay:2s; --dur:6s;"><svg viewBox="0 0 40 40"><polygon points="20,2 38,20 20,38 2,20" fill="none" stroke="#f7a438" stroke-width="2" opacity="0.6"/></svg></div>
+                        <div class="geo-shape geo-circle" style="--sx:95%; --sy:30%; --size:40px; --delay:4s; --dur:10s;"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="15" fill="rgba(232,93,38,0.06)" stroke="#e85d26" stroke-width="1.5" opacity="0.5"/></svg></div>
+                        <div class="geo-shape geo-cross" style="--sx:45%; --sy:95%; --size:45px; --delay:1s; --dur:7.5s;"><svg viewBox="0 0 40 40"><line x1="8" y1="20" x2="32" y2="20" stroke="#f7a438" stroke-width="2" opacity="0.55"/><line x1="20" y1="8" x2="20" y2="32" stroke="#f7a438" stroke-width="2" opacity="0.55"/></svg></div>
+                        <div class="geo-shape geo-dots" style="--sx:35%; --sy:-6%; --size:55px; --delay:2.5s; --dur:8.5s;">
+                            <svg viewBox="0 0 40 40">
+                                <circle cx="10" cy="10" r="3" fill="#e85d26" opacity="0.45"/>
+                                <circle cx="20" cy="10" r="3" fill="#e85d26" opacity="0.35"/>
+                                <circle cx="30" cy="10" r="3" fill="#e85d26" opacity="0.45"/>
+                                <circle cx="10" cy="20" r="3" fill="#e85d26" opacity="0.35"/>
+                                <circle cx="20" cy="20" r="3" fill="#f7a438" opacity="0.55"/>
+                                <circle cx="30" cy="20" r="3" fill="#e85d26" opacity="0.35"/>
+                                <circle cx="10" cy="30" r="3" fill="#e85d26" opacity="0.45"/>
+                                <circle cx="20" cy="30" r="3" fill="#e85d26" opacity="0.35"/>
+                                <circle cx="30" cy="30" r="3" fill="#e85d26" opacity="0.45"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="mockup-browser">
+                        <div class="browser-bar">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <div class="address-bar">windcrest.in/portfolio</div>
+                        </div>
+                        <div class="browser-content">
+                            <!-- Gradient Mesh Background -->
+                            <div class="mesh-bg">
+                                <div class="mesh-gradient mesh-g1"></div>
+                                <div class="mesh-gradient mesh-g2"></div>
+                                <div class="mesh-gradient mesh-g3"></div>
+                                <div class="mesh-gradient mesh-g4"></div>
+                            </div>
+                            <!-- Inner Floating Shapes (within browser content) -->
+                            <div class="inner-shapes">
+                                <div class="inner-shape" style="--ix:42%; --iy:5%; --isize:22px; --idel:0s; --idur:5s;"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="none" stroke="#e85d26" stroke-width="1.5" opacity="0.6"/></svg></div>
+                                <div class="inner-shape" style="--ix:46%; --iy:88%; --isize:18px; --idel:1.5s; --idur:6s;"><svg viewBox="0 0 20 20"><polygon points="10,2 18,18 2,18" fill="none" stroke="#f7a438" stroke-width="1.5" opacity="0.5"/></svg></div>
+                                <div class="inner-shape" style="--ix:95%; --iy:45%; --isize:16px; --idel:2.5s; --idur:7s;"><svg viewBox="0 0 20 20"><rect x="3" y="3" width="14" height="14" rx="2" fill="none" stroke="#7c3aed" stroke-width="1.5" opacity="0.45" transform="rotate(15 10 10)"/></svg></div>
+                                <div class="inner-shape" style="--ix:2%; --iy:50%; --isize:14px; --idel:3s; --idur:5.5s;"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="4" fill="rgba(232,93,38,0.12)" stroke="#e85d26" stroke-width="1" opacity="0.5"/></svg></div>
+                            </div>
+                            <!-- Split Content — Terminal + Portfolio -->
+                            <div class="mockup-split">
+                                <!-- Code Terminal (Left) -->
+                                <div class="mockup-terminal">
+                                    <div class="terminal-header">
+                                        <span class="terminal-dots">
+                                            <i></i><i></i><i></i>
+                                        </span>
+                                        <span class="terminal-filename">index.html</span>
+                                    </div>
+                                    <div class="terminal-body">
+                                        <div class="code-line" data-delay="0"><span class="code-tag">&lt;section</span> <span class="code-attr">class</span>=<span class="code-string">"hero"</span><span class="code-tag">&gt;</span></div>
+                                        <div class="code-line" data-delay="200"><span class="code-text">  </span><span class="code-tag">&lt;h1&gt;</span><span class="code-text">Windcrest</span><span class="code-tag">&lt;/h1&gt;</span></div>
+                                        <div class="code-line" data-delay="400"><span class="code-text">  </span><span class="code-tag">&lt;p&gt;</span><span class="code-text">Crafted for</span></div>
+                                        <div class="code-line" data-delay="600"><span class="code-text">     </span><span class="code-attr">India's</span> <span class="code-string">Digital</span></div>
+                                        <div class="code-line" data-delay="800"><span class="code-text">     </span><span class="code-tag">&lt;span</span> <span class="code-attr">class</span>=<span class="code-string">"accent"</span><span class="code-tag">&gt;</span><span class="code-text">Future</span><span class="code-tag">&lt;/span&gt;</span></div>
+                                        <div class="code-line" data-delay="1000"><span class="code-text">  </span><span class="code-tag">&lt;/p&gt;</span></div>
+                                        <div class="code-line" data-delay="1200"><span class="code-text">  </span><span class="code-tag">&lt;button</span> <span class="code-attr">onclick</span>=</div>
+                                        <div class="code-line" data-delay="1400"><span class="code-text">    </span><span class="code-string">"launch()"</span><span class="code-tag">&gt;</span></div>
+                                        <div class="code-line" data-delay="1600"><span class="code-text">    </span><span class="code-fn">Go Live</span> <span class="code-tag">&lt;/button&gt;</span></div>
+                                        <div class="code-line" data-delay="1800"><span class="code-tag">&lt;/section&gt;</span></div>
+                                        <div class="code-cursor"><span class="cursor-blink">|</span></div>
+                                    </div>
+                                </div>
+                                <!-- Portfolio Preview (Right) -->
+                                <div class="mockup-preview">
+                                    <div class="preview-nav">
+                                        <span class="preview-logo">W</span>
+                                        <span class="preview-nav-links">
+                                            <i>Work</i><i>About</i><i>Contact</i>
+                                        </span>
+                                    </div>
+                                    <div class="preview-gallery">
+                                        <div class="gallery-track" id="gallery-track">
+                                            <div class="gallery-item">
+                                                <div class="gallery-thumb" style="background: linear-gradient(135deg, #e85d26, #f7a438);">
+                                                    <i class="fa-solid fa-store"></i>
+                                                </div>
+                                                <span class="gallery-label">E-commerce</span>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <div class="gallery-thumb" style="background: linear-gradient(135deg, #2563eb, #60a5fa);">
+                                                    <i class="fa-solid fa-building"></i>
+                                                </div>
+                                                <span class="gallery-label">Corporate</span>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <div class="gallery-thumb" style="background: linear-gradient(135deg, #7c3aed, #a855f7);">
+                                                    <i class="fa-solid fa-palette"></i>
+                                                </div>
+                                                <span class="gallery-label">Creative</span>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <div class="gallery-thumb" style="background: linear-gradient(135deg, #16a34a, #4ade80);">
+                                                    <i class="fa-solid fa-utensils"></i>
+                                                </div>
+                                                <span class="gallery-label">Restaurant</span>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <div class="gallery-thumb" style="background: linear-gradient(135deg, #dc2626, #f87171);">
+                                                    <i class="fa-solid fa-heart-pulse"></i>
+                                                </div>
+                                                <span class="gallery-label">Wellness</span>
+                                            </div>
+                                            <div class="gallery-item">
+                                                <div class="gallery-thumb" style="background: linear-gradient(135deg, #0891b2, #67e8f9);">
+                                                    <i class="fa-solid fa-graduation-cap"></i>
+                                                </div>
+                                                <span class="gallery-label">Education</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-card card-1">
+                        <i class="fa-solid fa-bolt"></i>
+                        <div><strong>99/100</strong><small>Performance</small></div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <div><strong>SSL Secure</strong><small>Certified</small></div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div><strong>+340%</strong><small>Traffic Growth</small></div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll</span>
         </div>
     </section>
 
-    <!-- ===== ABOUT US SECTION ===== -->
+    <!-- MARQUEE STRIP -->
+    <div class="marquee-strip">
+        <div class="marquee-track">
+            <span>Responsive Design</span><span class="sep">✦</span>
+            <span>SEO Optimized</span><span class="sep">✦</span>
+            <span>Blazing Fast</span><span class="sep">✦</span>
+            <span>Mobile First</span><span class="sep">✦</span>
+            <span>Custom Tailored</span><span class="sep">✦</span>
+            <span>Payment Gateway</span><span class="sep">✦</span>
+            <span>E-commerce Ready</span><span class="sep">✦</span>
+            <span>Indian Market Experts</span><span class="sep">✦</span>
+            <span>Responsive Design</span><span class="sep">✦</span>
+            <span>SEO Optimized</span><span class="sep">✦</span>
+            <span>Blazing Fast</span><span class="sep">✦</span>
+            <span>Mobile First</span><span class="sep">✦</span>
+            <span>Custom Tailored</span><span class="sep">✦</span>
+            <span>Payment Gateway</span><span class="sep">✦</span>
+            <span>E-commerce Ready</span><span class="sep">✦</span>
+            <span>Indian Market Experts</span><span class="sep">✦</span>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
     <section id="about" class="about-us">
         <div class="container">
-            <h3 data-aos="fade-up">Why Choose Windcrest?</h3>
-            <p data-aos="fade-up" data-aos-delay="100">At Windcrest, we understand the unique needs of Indian
-                businesses. We combine innovative design with robust technology to deliver websites that not only look
-                great but also drive results. From small businesses to growing enterprises, our solutions are scalable,
-                secure, and designed for success.</p>
+            <div class="section-label" data-aos="fade-right">— Why Choose Us</div>
+            <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Built Different.<br><em>Built for Results.</em></h2>
+            <p class="section-body" data-aos="fade-up" data-aos-delay="200">At Windcrest, we understand the unique needs of Indian businesses. We combine innovative design with robust technology to deliver websites that not only look great but also drive results.</p>
+
             <div class="features-grid">
-
                 <div class="feature-item" data-aos="fade-up" data-aos-delay="0">
-                    <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                        <div class="feature-num">01</div>
+                    </div>
                     <h4>Stunning Design</h4>
-                    <p>Modern, responsive, and visually appealing designs that captivate your audience.</p>
+                    <p>Modern, responsive, and visually captivating designs built to convert visitors into customers.</p>
+                    <div class="feature-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
                 </div>
-
                 <div class="feature-item" data-aos="fade-up" data-aos-delay="150">
-                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
-                    <h4>Blazing Fast Performance</h4>
-                    <p>Optimized websites that load quickly, providing an excellent user experience.</p>
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                        <div class="feature-num">02</div>
+                    </div>
+                    <h4>Blazing Performance</h4>
+                    <p>Optimized to the core — sub-2s load times and 90+ Lighthouse scores as standard.</p>
+                    <div class="feature-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
                 </div>
-
                 <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-                    <div class="feature-icon"><i class="fas fa-headset"></i></div>
-                    <h4>Dedicated Local Support</h4>
-                    <p>Reliable support tailored for the Indian market, ensuring your peace of mind.</p>
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+                        <div class="feature-num">03</div>
+                    </div>
+                    <h4>Local Support</h4>
+                    <p>Dedicated support in Hindi & English, tailored for the Indian market — always just a call away.</p>
+                    <div class="feature-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
                 </div>
-
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="450">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+                        <div class="feature-num">04</div>
+                    </div>
+                    <h4>Mobile First</h4>
+                    <p>Every site we build is pixel-perfect on any screen — from a ₹5,000 phone to a 4K monitor.</p>
+                    <div class="feature-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon-wrap">
+                        <div class="feature-icon"><i class="fas fa-search"></i></div>
+                        <div class="feature-num">05</div>
+                    </div>
+                    <h4>SEO & Analytics</h4>
+                    <p>Rank higher on Google from day one. Full analytics setup so you always know what's working.</p>
+                    <div class="feature-arrow"><i class="fa-solid fa-arrow-up-right"></i></div>
+                </div>
+                <div class="feature-item feature-cta-card" data-aos="fade-up" data-aos-delay="750">
+                    <p class="cta-question">Ready to elevate your digital presence?</p>
+                    <a href="#contact" class="btn btn-primary">Start a Project <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== PRICING PLANS SECTION ===== -->
+    <!-- PROCESS STRIP -->
+    <div class="process-strip">
+        <div class="container">
+            <div class="process-steps">
+                <div class="process-step" data-aos="fade-up" data-aos-delay="0">
+                    <div class="step-circle">1</div>
+                    <h5>Discover</h5>
+                    <p>We learn your goals & audience</p>
+                </div>
+                <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-circle">2</div>
+                    <h5>Design</h5>
+                    <p>Wireframes & visual identity</p>
+                </div>
+                <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-circle">3</div>
+                    <h5>Develop</h5>
+                    <p>Clean code, tested on all devices</p>
+                </div>
+                <div class="process-arrow"><i class="fa-solid fa-chevron-right"></i></div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-circle">4</div>
+                    <h5>Launch</h5>
+                    <p>Live in days, not months</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PRICING -->
     <section id="plans" class="pricing-plans">
         <div class="container">
-            <h3 data-aos="fade-up">Our Website Plans</h3>
-            <p class="section-description" data-aos="fade-up">Choose a plan that fits your vision and budget. All prices
-                in INR.</p>
+            <div class="section-label" data-aos="fade-right">— Our Plans</div>
+            <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Transparent Pricing.<br><em>No Surprises.</em></h2>
+            <p class="section-body" data-aos="fade-up" data-aos-delay="200">All prices in INR. One-time payment, no hidden fees.</p>
+
             <div class="plans-grid">
-
-                <!-- Starter Plan -->
-                <div class="plan-card basic" data-aos="flip-left" data-aos-delay="0">
-                    <h4>Starter Plan</h4>
-                    <p class="price">₹ 4,999<span>/one-time</span></p>
-                    <ul>
-                        <li>Single Page Website</li>
-                        <li>Responsive Design</li>
-                        <li>Essential SEO Setup</li>
-                        <li>Contact Form Integration</li>
-                        <li>1 Month Free Support</li>
-                        <li class="unavailable">Advanced Features</li>
-                        <li class="unavailable">E-commerce Functionality</li>
+                <!-- Starter -->
+                <div class="plan-card basic" data-aos="fade-up" data-aos-delay="0">
+                    <div class="plan-header">
+                        <div class="plan-tag">Starter</div>
+                        <div class="plan-icon"><i class="fa-solid fa-seedling"></i></div>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>4,999
+                        <small>/one-time</small>
+                    </div>
+                    <p class="plan-desc">Perfect for individuals and small businesses making their first online move.</p>
+                    <ul class="plan-features">
+                        <li class="ok"><i class="fa-solid fa-check"></i>Single Page Website</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Responsive Design</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Essential SEO Setup</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Contact Form Integration</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>1 Month Free Support</li>
+                        <li class="no"><i class="fa-solid fa-xmark"></i>Advanced Features</li>
+                        <li class="no"><i class="fa-solid fa-xmark"></i>E-commerce Functionality</li>
                     </ul>
-                    <button class="btn btn-select">Select Basic Plan</button>
+                    <button class="btn btn-plan" data-plan="basic">Get Starter Plan <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Classic Plan -->
-                <div class="plan-card pro" data-aos="flip-left" data-aos-delay="150">
-                    <h4>Classic Plan</h4>
-                    <p class="price">₹ 8,999<span>/one-time</span></p>
-                    <ul>
-                        <li>Up to 5 Pages</li>
-                        <li>Custom Design</li>
-                        <li>Advanced SEO Optimization</li>
-                        <li>Social Media Integration</li>
-                        <li>Blog Setup</li>
-                        <li>3 Months Free Support</li>
-                        <li class="unavailable">E-commerce Functionality</li>
+                <!-- Classic — Featured -->
+                <div class="plan-card pro featured" data-aos="fade-up" data-aos-delay="150">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <div class="plan-tag">Classic</div>
+                        <div class="plan-icon"><i class="fa-solid fa-fire"></i></div>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>8,999
+                        <small>/one-time</small>
+                    </div>
+                    <p class="plan-desc">The sweet spot for growing businesses ready to stand out online.</p>
+                    <ul class="plan-features">
+                        <li class="ok"><i class="fa-solid fa-check"></i>Up to 5 Pages</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Custom Design</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Advanced SEO Optimization</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Social Media Integration</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Blog Setup</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>3 Months Free Support</li>
+                        <li class="no"><i class="fa-solid fa-xmark"></i>E-commerce Functionality</li>
                     </ul>
-                    <button class="btn btn-select">Select Pro Plan</button>
+                    <button class="btn btn-plan featured-btn" data-plan="pro">Get Classic Plan <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
 
-                <!-- Premium Plan -->
-                <div class="plan-card pro-max" data-aos="flip-left" data-aos-delay="300">
-                    <h4>Premium Plan</h4>
-                    <p class="price">₹ 12,999<span>/one-time</span></p>
-                    <ul>
-                        <li>Unlimited Pages</li>
-                        <li>Premium Custom Design</li>
-                        <li>Full SEO Strategy & Analytics</li>
-                        <li>E-commerce Integration (Basic)</li>
-                        <li>Payment Gateway Setup</li>
-                        <li>6 Months Priority Support</li>
-                        <li>Content Management System</li>
+                <!-- Premium -->
+                <div class="plan-card pro-max" data-aos="fade-up" data-aos-delay="300">
+                    <div class="plan-header">
+                        <div class="plan-tag">Premium</div>
+                        <div class="plan-icon"><i class="fa-solid fa-crown"></i></div>
+                    </div>
+                    <div class="plan-price">
+                        <span class="currency">₹</span>12,999
+                        <small>/one-time</small>
+                    </div>
+                    <p class="plan-desc">Full-scale digital presence with e-commerce and premium features for enterprises.</p>
+                    <ul class="plan-features">
+                        <li class="ok"><i class="fa-solid fa-check"></i>Unlimited Pages</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Premium Custom Design</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Full SEO Strategy & Analytics</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>E-commerce Integration</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Payment Gateway Setup</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>6 Months Priority Support</li>
+                        <li class="ok"><i class="fa-solid fa-check"></i>Content Management System</li>
                     </ul>
-                    <button class="btn btn-select">Select Pro Max Plan</button>
+                    <button class="btn btn-plan" data-plan="pro-max">Get Premium Plan <i class="fa-solid fa-arrow-right"></i></button>
                 </div>
+            </div>
 
+            <div class="plans-note" data-aos="fade-up">
+                <i class="fa-solid fa-shield-halved"></i>
+                All plans include free SSL certificate, 1-year domain guidance & deployment support.
             </div>
         </div>
     </section>
 
-    <!-- ===== CONTACT SECTION ===== -->
-    <section id="contact" class="contact-us">
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
         <div class="container">
-            <h3 data-aos="fade-up">Get in Touch</h3>
-            <p class="section-description" data-aos="fade-up" data-aos-delay="100">Have questions or ready to start your
-                project? Send us a message!</p>
-            <form class="contact-form" data-aos="fade-up" data-aos-delay="200">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="section-label" data-aos="fade-right">— What Clients Say</div>
+            <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Trusted by<br><em>Indian Businesses.</em></h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="stars">★★★★★</div>
+                    <p>"Windcrest transformed our online presence completely. Our inquiries doubled within the first month of launch!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div><strong>Rajesh Kumar</strong><small>Owner, Delhi Handicrafts</small></div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="stars">★★★★★</div>
+                    <p>"Professional, fast, and affordable. They understood exactly what a startup like ours needed. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PS</div>
+                        <div><strong>Priya Sharma</strong><small>Co-Founder, TechStartup Pune</small></div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="plan-interest">Interested Plan</label>
-                    <select id="plan-interest" name="plan-interest">
-                        <option value="">Select a Plan</option>
-                        <option value="basic">Starter Plan (₹ 4,999)</option>
-                        <option value="pro">Classic Plan (₹ 8,999)</option>
-                        <option value="pro-max">Premium Plan (₹ 12,999)</option>
-                        <option value="other">Other / Custom</option>
-                    </select>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stars">★★★★★</div>
+                    <p>"The Premium plan was worth every rupee. E-commerce is running smoothly and our sales are up 40% this quarter."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AM</div>
+                        <div><strong>Arjun Mehta</strong><small>Director, Mumbai Fashion Boutique</small></div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <!-- ===== FOOTER ===== -->
+    <!-- CONTACT -->
+    <section id="contact" class="contact-us">
+        <div class="container contact-container">
+            <div class="contact-info" data-aos="fade-right">
+                <div class="section-label">— Get in Touch</div>
+                <h2 class="section-title">Let's Build<br><em>Something Great.</em></h2>
+                <p>Ready to start your digital journey? Send us a message and we'll get back to you within 24 hours.</p>
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@windcrest.in</span>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>+91 98765 43210</span>
+                    </div>
+                    <div class="contact-detail-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>New Delhi, India</span>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="contact-form-wrap" data-aos="fade-left" data-aos-delay="150">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group floating">
+                            <input type="text" id="name" name="name" required placeholder=" ">
+                            <label for="name">Your Name</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group floating">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Your Email</label>
+                            <div class="input-line"></div>
+                        </div>
+                    </div>
+                    <div class="form-group floating">
+                        <select id="plan-interest" name="plan-interest">
+                            <option value="">Select a Plan</option>
+                            <option value="basic">Starter Plan (₹ 4,999)</option>
+                            <option value="pro">Classic Plan (₹ 8,999)</option>
+                            <option value="pro-max">Premium Plan (₹ 12,999)</option>
+                            <option value="other">Other / Custom</option>
+                        </select>
+                        <label for="plan-interest">Interested Plan</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <div class="form-group floating">
+                        <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="input-line"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary submit-btn">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-icon"><i class="fa-solid fa-paper-plane"></i></span>
+                    </button>
+                    <div class="form-success" id="form-success">
+                        <i class="fa-solid fa-circle-check"></i>
+                        Message sent! We'll be in touch within 24 hours.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Windcrest. All rights reserved.</p>
-            <div class="footer-links">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="#home" class="logo-link">
+                    <svg class="logo-icon" viewBox="0 0 40 20" fill="none">
+                        <path d="M2 17 L10 3 L18 12 L26 3 L34 17" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span class="logo-text">Windcrest</span>
+                </a>
+                <p>Crafting digital masterpieces for Indian businesses since 2022.</p>
+            </div>
+            <div class="footer-links-col">
+                <h6>Quick Links</h6>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#plans">Plans</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-links-col">
+                <h6>Legal</h6>
                 <a href="#">Privacy Policy</a>
                 <a href="#">Terms of Service</a>
+                <a href="#">Refund Policy</a>
+            </div>
+            <div class="footer-links-col">
+                <h6>Connect</h6>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+                <a href="#">WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2026 Windcrest. All rights reserved. Made with <span class="heart">♥</span> in India.</p>
             </div>
         </div>
     </footer>
 
-    <!-- External JavaScript -->
-    <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/nav.js"></script>
+    <script src="assets/js/hero-effects.js"></script>
+    <script src="assets/js/forms.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
-
 </html>
