@@ -57,3 +57,26 @@ footer {
 
 .heart { color: var(--accent); }
 
+/* Hide the baked-in text from PNG by clipping to just the M icon */
+.footer-brand .logo-link img {
+  height: 45px;
+  width: auto;
+  /* Clip to show only the M icon portion, hiding the Wind/Crest text */
+  max-width: 100px;
+  object-fit: cover;
+  object-position: left center;
+}
+
+.footer-brand .logo-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand .logo-link .logo-text {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
