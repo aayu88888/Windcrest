@@ -5,7 +5,7 @@
    ============================================================ */
 .hero {
     min-height: 100vh;
-    padding: calc(var(--nav-height) + 60px) 0 80px;
+    padding: calc(var(--nav-height) + 26px) 0 80px;
     position: relative;
     overflow: hidden;
 }
